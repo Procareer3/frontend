@@ -1,0 +1,30 @@
+body{
+background-color: whitesmoke;
+}
+
+#mern, h3 {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#mern tr:nth-child(even) {
+    background-color:lightcyan
+}
+
+#mern th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: steelblue;
+    color: white;
+}
+
+#mern #footer {
+    background-color: lightsteelblue;
+    font-size: small;
+    font-weight: light;
+    font-style: italic
+}
+
+.day {
+    font-weight: bold;
+}

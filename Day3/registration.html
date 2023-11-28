@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+</head>
+<body>
+    <!-- alternately to using labels use the placeholder attribute in input element -->
+    <form>
+<!-- 
+        <label for="name">Name: </label>
+        <input type="text" name="name" id="name" required><br>
+        <label for="pass">Password: </label>
+        <input type="password" name="password" id="pass" required><br>
+        <label for="repass">Confirm Password: </label>
+        <input type="password" name="password" id="repass" required><br>
+        <label for="email">Email: </label>
+        <input type="email" name="email" id="email" required><br> -->
+
+        <input type="text" name="username" id="username" placeholder="Enter Name"><br>
+        <input type="password" name="password" id="password" placeholder="Enter Password"><br>
+        <input type="text" name="cpassword" id="cpassword" placeholder="Re-Enter Password"><br>
+        <input type="email" name="username" id="email" placeholder="Enter Email"><br>
+        <input type="number" name="age" id="age" placeholder="Enter Age"><br>
+        <!-- Group Radio buttons with the name attribute -->
+       
+        <input type="radio" name="gender" id="male" value="male">
+        <label for="male">Male</label>
+        
+        <input type="radio" name="gender" id="female" value="female">
+        <label for="female">Female</label>
+        
+        <input type="radio" name="gender" id="none" value="none">
+        <label for="none">Prefer Not to Answer</label><br>
+
+        <!-- Note: for checkboxes each option need to have own name attribute or else sever will only choose one of the options -->
+        <input type="checkbox" name="course1" id="FE">
+        <label for="FE">Frontend</label>
+        <input type="checkbox" name="course2" id="BE">
+        <label for="BE">Backend</label>
+        <input type="checkbox" name="course3" id="cyber">
+        <label for="FE">Cybersecurity</label><br>
+        <br>
+        <label for="courses">Select Courses (Ctrl + select): </label>
+        <!-- Use the multiple attribut in select tag to choose multiple options by pressing CTRL and cursor -->
+        <select name="courses" id="course" multiple>
+            <option value="fsd">
+                Full Stack Developer
+            </option>
+            <option value="ai">AI</option>
+            <option value="cs">Cybersecurity</option>
+        </select><br>
+        <br>
+        <textarea name="about" rows="4" cols="100" placeholder="Tell me about yourself..."></textarea><br>
+
+        <input type="submit" 
+        name="Submit">
+    </form>
+</body>
+</html>

@@ -1,0 +1,44 @@
+body{
+    background-image:url("/Day4/image/background.jpeg");
+    background-size: contain;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color:rgb(84, 252, 37);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+ul {
+    font-size: medium;
+    color: blue;
+    border: ridge 5px salmon;
+    background-color:rgb(146, 220, 220);
+}
+
+ol{
+    font-size: small;
+}
+
+ol > li{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+#item1, #item3, #item5{
+    background-color:aquamarine;
+}
+
+#item2,
+#item4 {
+    background-color: yellow;
+    list-style: square;
+}
+
+
+#listD {
+    color:aqua;
+}
