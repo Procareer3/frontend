@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <style>
+        .gradesTable {
+            visibility: hidden;
+            position: absolute;
+            top: 40px;
+        }
+    </style>
+    <script>
+        function changeDisplay(){
+            let count = parseInt(0);
+         
+            let input1 = parseInt(document.getElementById('calc').value).toFixed(2);
+            document.querySelector('.calc > td:nth-of-type(2)').innerHTML = input1;
+            count += parseInt(input1);
+            // console.log(input1)
+            let input2 = parseInt(document.getElementById('eng').value).toFixed(2);
+            document.querySelector('.eng > td:nth-of-type(2)').innerHTML = input2;
+            count += parseInt(input2);
+
+            let input3 = parseInt(document.getElementById('biochem').value).toFixed(2);
+            document.querySelector('.biochem > td:nth-of-type(2)').innerHTML = input3;
+            count += parseInt(input3);
+
+            let input4 = parseInt(document.getElementById('phys').value).toFixed(2);
+            document.querySelector('.phys > td:nth-of-type(2)').innerHTML = input4;
+            count += parseInt(input4);
+
+            let input5 = parseInt(document.getElementById('psych').value).toFixed(2);
+            document.querySelector('.psych > td:nth-of-type(2)').innerHTML = input5;
+            count += parseInt(input5);
+
+            // console.log(count)
+            let totalGPA = parseInt(count / 5).toFixed(2);
+            // console.log(count)
+            document.querySelector('.footer > td:nth-of-type(1)').innerHTML = `<b>${totalGPA}</b>`;
+            document.querySelector('.gradesGrid').style.visibility = 'hidden';
+            document.querySelector('.gradesTable').style.visibility = 'visible';
+        }
+    </script>
+    <title>GPA Table</title>
+</head>
+<body>
+    <!-- Subjects label and input Grid-->
+    <div class="container w-50 mt-4 gradesGrid">
+        <h2 class="text-center mb-4">Enter Subject Grades</h2>
+        <!-- row1 -->
+        <form>
+            <div class="row">
+                <div class="col-9">
+                    <div class="mb-3">
+                        <label for="" class="form-label">Calculus: </label>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <input type="text" class="form-control" name="calc" id="calc" aria-describedby="helpId">
+                </div>
+            </div>
+            <!-- row2 -->
+            <div class="row">
+                <div class="col-9">
+                    <div class="mb-3">
+                        <label for="" class="form-label">English: </label>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <input type="text" class="form-control" name="eng" id="eng" aria-describedby="helpId" placeholder="">
+                </div>
+            </div>
+            <!-- row3 -->
+            <div class="row">
+                <div class="col-9">
+                    <div class="mb-3">
+                        <label for="" class="form-label">Biochemistry: </label>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <input type="text" class="form-control" name="biochem" id="biochem" aria-describedby="helpId" placeholder="">
+                </div>
+            </div>
+            <!-- row4 -->
+            <div class="row">
+                <div class="col-9">
+                    <div class="mb-3">
+                        <label for="" class="form-label">Physics: </label>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <input type="text" class="form-control" name="phys" id="phys" aria-describedby="helpId">
+                </div>
+            </div>
+            <!-- row5 -->
+            <div class="row">
+                <div class="col-9">
+                    <div class="mb-3">
+                        <label for="" class="form-label">Psychology: </label>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <input type="text" class="form-control" name="psych" id="psych" aria-describedby="helpId">
+                </div>
+            </div>
+            <!-- Submit Button, use type button to prevent reload after submission and removing input from DOM -->
+            <button type="button" onclick=changeDisplay() class="btn btn-primary mt-4">
+            Submit
+            </button>
+        </form>
+
+    </div>   
+    <!-- End Grid -->
+    <!-- Table of Subject Grades and Total GPA -->
+    <div class="container-fluid mt-4 gradesTable">
+        <h2 class="text-center">Subject Grades and GPA</h2>
+        <div class="table-responsive">
+            <table class="table table-primary table-striped">
+                <thead>
+                    <tr>
+                        <th scope="col">Subject</th>
+                        <th scope="col">Grade</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="calc">
+                        <td scope="row">Calculus</td>
+                        <td></td>
+                    </tr>
+                    <tr class="eng">
+                        <td scope="row">English</td>
+                        <td></td>
+                    </tr>
+                    <tr class="biochem">
+                        <td scope="row">Biochemistry</td>
+                        <td></td>
+                    </tr>
+                    <tr class="phys">
+                        <td scope="row">Physics</td>
+                        <td></td>
+                    </tr>
+                    <tr class="psych">
+                        <td scope="row">Psychology</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr class="footer">
+                        <th scope="row">Total GPA: </th>
+                        <td></td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+    </div>
+    <!-- End of Table -->
+</body>
+</html>

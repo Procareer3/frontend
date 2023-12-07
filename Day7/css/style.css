@@ -1,0 +1,60 @@
+body {
+    font-family: monospace;
+    background-color: #FAF9F6;
+    box-sizing: border-box;
+    position: relative;
+}
+
+#navId{
+    background-color: white;
+    opacity: 1;
+    
+}
+.anchor{
+    display:block;
+    padding-top: 100px;
+    margin-top: -100px;
+}
+
+#avatar {
+    text-align: center;
+}
+
+#table-div {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+#table1 tr:nth-child(odd) {
+    background-color: lightgray;
+}
+
+#table1 {
+    border-collapse: collapse;
+    margin-top: -10px;
+}
+
+#table2 {
+    border: ridge 5px gray;
+}
+
+@media (max-width: 767px) {
+    #table2, td {
+        display: block;
+    }
+}
+
+@media (max-width: 767px) {
+    #avatar, #tech, #expertise, #experience, #accomplish{
+        display: block;
+        padding-top: 200px;
+        margin-top: -200px;
+    } 
+}
+
+#contact {
+    background-color: lightgray;
+    padding: 10px;
+    margin: 0px;
+}

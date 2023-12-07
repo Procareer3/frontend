@@ -1,0 +1,71 @@
+* {
+    font-family: "New Century Schoolbook",
+    "TeX Gyre Schola",
+    serif, "Playfair Display", "san serif", Helvetica;
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0px;
+    height: 100vh;
+}
+nav{
+    background-color: #1E595D;
+}
+
+.navbar-brand h5{
+    font-weight: bolder;
+}
+
+#navId a:hover {
+    color: #B6B19E;
+}
+
+button {
+    all: unset;
+}
+
+button:focus {
+    outline: revert;
+}
+
+
+.container-fluid a {
+    color: #E7E3E0;
+}
+
+.navbar i {
+    color: #73A68C;
+}
+
+li a, li button {
+    color: #E7E3E0 !important;
+}
+
+li a:hover, li button:hover {
+    color: #B6B19E !important;
+}
+
+nav, i{
+    padding: 5px;
+}
+
+body #main-div {
+    background-image: url(../image/prudence-earl-NwBx723XaHw-unsplash.jpg);
+    background-size: cover;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+
+
+
+body img{
+    width: 100%;
+}
+
+h5{
+    margin: 0px;
+    text-align: center;
+}
+
