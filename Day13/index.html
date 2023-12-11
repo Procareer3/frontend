@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        function displayList(){
+            const arr = ['Leah', 'Spok', 'Captain Kirk', 'Darth Vader', 'Luke Skywalker']
+            let main = document.getElementById('maindiv');
+            let ul = document.createElement('ul');
+
+            arr.forEach(ele => {
+                let li = document.createElement('li')
+                li.textContent = ele
+                ul.appendChild(li)
+            });
+
+            main.appendChild(ul);
+
+        }
+    </script>
+    <title>DOM Manipulation</title>
+</head>
+<body>
+    <h1>Star Wars/Star Trek Characters</h1>
+    <div id="maindiv"></div>
+    <button onclick="displayList()">Display List</button>
+</body>
+</html>
