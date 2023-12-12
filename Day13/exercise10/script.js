@@ -55,7 +55,7 @@ const data = [
         "about": "Zensar is a technology consulting and services company with 10,000 associates in 33 global locations. More than 130 leading enterprises depend on our expertise to be more disruptive, agile, and competitive."
     }
 ]
-//target container in index.html to put grid on page
+//target container in index.html to build grid on page
 let table = document.getElementById('gridInfo');
 
 //iterate thru objects from json data and create elements for each
