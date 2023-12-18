@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/b8eec232dc.js" crossorigin="anonymous"></script>
+     <link href="./css/index.min.css" rel="stylesheet"/>
+    <title>Products</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-sm" id="navId">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">
+                <h5>Good Greens.</h5>
+            </a>
+            <button class="navbar-toggler navbar-toggler-icon d-lg-none" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false"
+                aria-label="Toggle navigation"></button>
+            <div class="collapse navbar-collapse" id="collapsibleNavId">
+                <ul class="navbar-nav me-auto mt-2 mt-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html" aria-current="page"><i
+                                class="fa-solid fa-house"></i>Home<span class="visually-hidden">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="about-us.html" target="_blank"><i
+                                class="fa-solid fa-rectangle-list"></i>About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="products.html"><i class="fa-solid fa-info"></i>Products</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link active" href="contact-us.html" target="_blank"><i
+                                class="fa-solid fa-address-card"></i>Contact Us</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                    <!-- Modal Body -->
+                        <button type="button" data-bs-toggle="modal" data-bs-target="#modalId">
+                            <i class="fa-solid fa-right-to-bracket"></i>Log In
+                        </button>
+                    </li>
+                </ul>
+                
+                <!-- Modal Body -->
+                <div class="modal fade" id="modalId" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false" role="dialog"
+                    aria-labelledby="modalTitleId" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-sm" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="modalTitleId">Welcome</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <form>
+                                    <div class="mb-3">
+                                        <label for="email" class="form-label">Email: </label>
+                                        <input type="email" class="form-control" name="email" id="email" rows="3" required>
+                
+                                        <label for="email" class="form-label">Password: </label>
+                                        <input type="password" class="form-control" name="password" id="password" rows="3" required>
+                
+                                        <div class="mb-3">
+                                            <button type="submit" class="btn btn-primary">Submit</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-primary">Save</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+<h1 style="text-align:center" class="bg-secondary">Plants Inventory</h1>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-4 mb-0">
+            <image src="./image/plant1.jpg"
+                class="img-fluid img-thumbnail w-100 h-75" alt="product1"></image>
+        </div>
+        <div class="col-sm-4">
+            <image src="./image/plant2.jpg" class="img-fluid img-thumbnail w-100 h-75"
+                alt="product2"></image>
+        </div>
+        <div class="col-sm-4">
+            <image src="./image/plant3.jpg" class="img-fluid img-thumbnail w-100 h-75"
+                alt="product3"></image>
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="col-sm-4">
+            <image src="./image/plant4.jpg" class="img-fluid img-thumbnail w-100 h-75" alt=product4></image>
+        </div>
+        <div class="col-sm-4">
+            <image src="./image/plant5.jpg" class="img-fluid img-thumbnail w-100 h-75" alt="product5">
+            </image>
+        </div>
+        <div class="col-sm-4">
+            <image src="./image/plant6.jpg" class="img-fluid img-thumbnail w-100 h-75" alt="product6"></image>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-4">
+            <image src="./image/plant7.jpg" class="img-fluid img-thumbnail w-100 h-75" alt=product4></image>
+        </div>
+        <div class="col-sm-4">
+            <image src="./image/plant8.jpg" class="img-fluid img-thumbnail w-100 h-75" alt="product5">
+            </image>
+        </div>
+        <div class="col-sm-4">
+            <image src="./image/plant9.jpg" class="img-fluid img-thumbnail w-100 h-75" alt="product6"></image>
+        </div>
+        <div class="col-sm-4">
+            <image src="./image/plant10.jpg" class="img-fluid img-thumbnail w-100 h-75" alt="product6"></image>
+        </div>
+    </div>
+    <footer class="text-center">&copy; Good Greens.</footer>
+</body>
+</html>

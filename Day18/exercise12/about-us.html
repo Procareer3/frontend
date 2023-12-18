@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/b8eec232dc.js" crossorigin="anonymous"></script>
+    <link href="./css/index.min.css" rel="stylesheet" />
+    <style>
+        .about{
+            width: 1000px;
+            margin: auto;
+            padding: 15px;
+            border: solid 1px lightgray
+        }
+
+        .about section {
+            text-align: center;
+        }
+    </style>
+    <title>About Us</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-sm" id="navId">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">
+                <h5>Good Greens.</h5>
+            </a>
+            <button class="navbar-toggler navbar-toggler-icon d-lg-none" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false"
+                aria-label="Toggle navigation"></button>
+            <div class="collapse navbar-collapse" id="collapsibleNavId">
+                <ul class="navbar-nav me-auto mt-2 mt-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html" aria-current="page"><i class="fa-solid fa-house"></i>Home<span
+                                class="visually-hidden">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="about-us.html" target="_blank"><i
+                                class="fa-solid fa-rectangle-list"></i>About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="products.html"><i class="fa-solid fa-info"></i>Products</a>
+                    </li>
+    
+                    <li class="nav-item">
+                        <a class="nav-link active" href="contact-us.html" target="_blank"><i
+                                class="fa-solid fa-address-card"></i>Contact Us</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <!-- Modal Button -->
+                        <button type="button" data-bs-toggle="modal" data-bs-target="#modalId">
+                            <i class="fa-solid fa-right-to-bracket"></i>Log In
+                        </button>                       
+                    </li>
+                </ul>
+                
+                <!-- Modal Body -->
+                <div class="modal fade" id="modalId" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false" role="dialog"
+                    aria-labelledby="modalTitleId" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-sm" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="modalTitleId">Welcome</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <form>
+                                    <div class="mb-3">
+                                        <label for="email" class="form-label">Email: </label>
+                                        <input type="email" class="form-control" name="email" id="email" rows="3" required>
+                
+                                        <label for="email" class="form-label">Password: </label>
+                                        <input type="password" class="form-control" name="password" id="password" rows="3" required>
+                
+                                        <div class="mb-3">
+                                            <button type="submit" class="btn btn-primary">Submit</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-primary">Save</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+   
+    <div class="about mt-5">
+        <section>
+            <h4>
+                🌿 Discover the Green Revolution: Elevate Your Space with Indoor Plants! 🌿
+            </h4>
+            <br>
+        
+            <p>
+                Dear Plant Newbies and Enthusiasts,
+            </p>
+        
+            <p>
+                I couldn't think of a better gift to suggest than the vibrant and life-enhancing world of indoor plants. Here
+                are compelling reasons why you should join the green revolution and bring these botanical wonders into your
+                living spaces:
+            </p>
+        
+            <br>
+            <p>
+                A Breath of Fresh Air:
+                Indoor plants are nature's air purifiers. They absorb pollutants and release oxygen, creating a healthier and
+                fresher indoor environment. Say goodbye to stale air and hello to a breath of fresh, oxygen-rich air!
+            </p>
+            <br>
+            <p>
+                Stress Relief and Boosted Productivity:
+                Numerous studies have shown that indoor plants can reduce stress and boost productivity. The calming effect of
+                greenery is like a mini-vacation for your mind, promoting a more relaxed and focused atmosphere.
+            </p>
+        
+            <br>
+            <p>
+                Aesthetically Pleasing Décor:
+                Transform your living or workspace into a lush oasis! Indoor plants add a touch of natural beauty, creating a
+                visually appealing and Instagram-worthy setting. From sleek succulents to leafy tropicals, there's a plant for
+                every style.
+            </p>
+        
+            <br>
+            <p>
+                Low Maintenance, High Reward:
+                Not blessed with a green thumb? No worries! Many indoor plants are low-maintenance and forgiving. With minimal
+                care, you can enjoy the rewards of a thriving green ecosystem. It's an easy and enjoyable way to connect with
+                nature.
+            </p>
+        </section>
+    </div>
+    <footer class="text-center fixed-bottom">&copy; Good Greens.</footer>
+</body>
+</html>
