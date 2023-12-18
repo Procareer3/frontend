@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    
+    <title>Virtual DOM-Digital Clock</title>
+</head>
+<body>
+    <!-- Show current day&time within 2 divs, first using innerHTML, second using React -->
+    <h1>Regular HTML Code</h1>
+    <div id="regular">
+        
+    </div>
+    <br><br><br>
+    <hr>
+    <h1>React Code</h1>
+    <div id="react">
+        
+    </div>
+</body>
+<script>
+    let regDiv=document.getElementById("regular");
+    let root = ReactDOM.createRoot(document.getElementById('react'));
+
+
+    let renderTime = () => {
+        //use set the innerHTML of the element to an outer div with an input and date object
+        regDiv.innerHTML = "<div><input/><p>" + (new Date()) + "</p></div>";
+
+        //create a react component with an outer div and two child siblings an input and date string
+        let dateComponent = React.createElement("div", null, React.createElement("input"), React.createElement("p", {}, (new Date()).toString()));
+        root.render(dateComponent);
+    }
+
+    //use setInterval do execute the above function every second(1000ms)    
+    setInterval(renderTime,1000);
+</script>
+</html>
+

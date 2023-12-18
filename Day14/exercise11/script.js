@@ -1,13 +1,13 @@
 let name;
 
-async function getWeather(){  
+function getWeather(){  
     try{
         let city = document.getElementById('zipcode').value;
         // console.log(city)
         let key = `d72729578543cfc435344f99b226b1c9`;
         let url = `https://api.openweathermap.org/data/2.5/weather?zip=${city}&appid=${key}&units=metric`;
         console.log(url)
-        await fetch(url)
+        fetch(url)
         .then((weather) => {
             return weather.json()
         })
