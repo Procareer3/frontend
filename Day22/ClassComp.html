@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="root"></div>
+
+    <script type="text/babel">
+        let rootNode = ReactDOM.createRoot(document.getElementById('root'));
+      
+          //class components extend to the parent React Component class and have render method
+          //always use "this" keymword to access props and methods
+        class ClassComp extends React.Component {
+            clickHandlerRegMethod(){
+                console.log(this.props.name)
+                //note props cannot be directly changed; they are immutable;
+                //incorrect code: this.props.name = "John" (gives error)
+            }
+
+            clickHandlerArrow = () => {
+                console.log(this.props.name)
+            }
+           
+            render(){
+                 let clickHandlerInsideRender = (props) => {
+                    console.log(this.props.name)
+                }
+                return (
+                    <div>
+                        {/* Use camelcase attributes in React onClick (not onclick) */}
+                        <h1>Hello, {this.props.name}!</h1>
+                        <button onClick={this.clickHandlerRegMethod.bind(this)}>Click Me--Reg Method</button><br></br>
+                        <button onClick={this.clickHandlerArrow}>Click Me--Arrow Method</button><br></br>
+                        <button onClick={clickHandlerInsideRender}>Click Me--Render Function</button><br></br>
+                    </div>
+                   
+                )
+            }
+        }
+        rootNode.render(<ClassComp name="Jane Doe" />);
+    </script>
+</body>
+
+</html>

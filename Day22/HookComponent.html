@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="root"></div>
+
+    <script type="text/babel">
+        //Use ReactDOM library to create root
+        let rootNode = ReactDOM.createRoot(document.getElementById('root'));
+        let useState = React.useState;
+        
+        let HookComp = (props) => {
+            //use hooks to change variables values on the Virtual DOM in order to render
+            //hooks are inside React components
+            let [counter, setCounter] = useState(0);
+            let [profile, setProfile] = useState({name: "Sylvia", age: 50, prof: "director"});
+            let [happy, setHappy] = useState(true);
+
+            let count = 1;
+            let clickHandler = () => {
+                counter = counter + 1
+                setCounter(counter)
+                count++;
+            }
+
+            let profileHandler = () => {
+                //useState with objects require passing entire obj, with new key/value pairs
+                setProfile({...profile, name: "Melody"});
+            }
+            return (
+                <div>
+                    <h1>Welcome To React Hooks</h1>
+                    <h4>{counter}</h4>
+                    <h4>{count}</h4>
+                    {"Name: " + profile.name}
+                    <br></br>
+                    {"Age: " + profile.age}
+                    <br></br>
+                    {"Profession: " + profile.prof}
+                    <br></br>
+                    <br></br>
+                    {"Mood: " + happy}{/* boolean will not render unless coerced to a string*/}
+                    <br></br>
+                    <br></br>
+                    <button onClick={clickHandler}>Click Me</button>
+                    <button onClick={profileHandler}>Change Name</button>
+                </div>
+            );
+        }
+        rootNode.render(<HookComp />);
+    </script>
+</body>
+
+</html>

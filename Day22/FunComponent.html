@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="root"></div>
+
+    <script type="text/babel">
+        let rootNode = ReactDOM.createRoot(document.getElementById('root'));
+        //let props = {name: "Jane Doe"}
+        let FunComp = (props) => {
+            let clickHandler = () => {
+                console.log(props.name + " clicked");
+
+            }
+            return (
+                <div>
+                    <h1>Hello, {props.name} !</h1>
+                    <button onClick={clickHandler}>Click Me</button>
+                </div>
+            );
+        }
+        rootNode.render(<FunComp name="Jane Doe" />);
+    </script>
+</body>
+
+</html>

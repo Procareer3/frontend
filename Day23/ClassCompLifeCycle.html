@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div id="root"></div>
+    
+    <script type="text/babel">
+        let root = ReactDOM.createRoot(document.getElementById('root'));
+
+        class CompLife extends React.Component {
+            //constructor is always called first
+            constructor(){
+                //super keyword is used to access properties on an object or invoke superclass's constructor
+                super();
+                console.log("Constructor");
+                this.state = {name: "Mike"}
+            }
+
+            componentWillMount(){
+                console.log("ComponentWillMount")
+            }
+
+            changeState(){
+                console.log("State Change")
+                this.setState({name: "Jane"})
+            }
+
+            //will keep state from updating when set to false
+            // shouldComponentUpdate(){
+            //     console.log("shouldComponentUpdate");
+            //     return false;
+            // }
+
+            ComponentWillUpdate(){
+                console.log("ComponentWillUpdate");
+            }
+
+            render(){
+                return (
+                    <div>
+                     <h1>Hello, Welcome to Class Component LifeCycles!</h1>
+                     <h3>{this.state.name}</h3>
+                     <button onClick={this.changeState.bind(this)}>Click to Change</button>   
+                    </div>
+                )
+            }
+
+            componentDidMount() {
+                console.log("ComponentDidMount")
+            }
+
+            componentDidUpdate() {
+                console.log("ComponentDidUpdate")
+            }
+
+            componentWillUnmount() {
+                console.log("ComponentWillUnmount")
+            }
+        }
+        
+
+       
+
+        root.render(<CompLife />) 
+    </script>
+
+    
+</body>
+</html>
