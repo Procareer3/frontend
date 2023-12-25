@@ -1,0 +1,7 @@
+
+//.babelrc add the following code -
+{
+    "presets": ["@babel/preset-react"],
+    "plugins": ["@babel/plugin-proposal-class-properties"]
+   }
+

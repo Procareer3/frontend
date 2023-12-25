@@ -10,3 +10,12 @@ React and Babel for JSX:
 <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
 <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
 <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+React From Scratch Without CRA:
+1. create root folder and change to directory
+2. npm init -y
+3. npm i webpack babel-loader @babel/preset-react @babel/core babel-preset-react html-webpack-plugin webpack-dev-server css-loader style-loader @babel/plugin-proposal-class-properties webpack-cli -D && npm i react react-dom -S
+4. add src and public folder
+5. add index.js and index.html to src
+6. Add to config files webpack.config.js and .babelrc
+7. add webpack.config code and .babelrc code and new scripts to package.son
