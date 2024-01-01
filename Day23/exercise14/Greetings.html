@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <style>
+        .text{
+            text-align: center;
+        }
+        h1 {
+            color: purple;
+            background-color: lightgrey;
+            margin: 0px;
+        }
+        h2 {
+            color: green;
+        }
+        
+    </style>
+    <title>Exercise 14</title>
+</head>
+
+<body>
+    <div id="root"></div>
+    
+    <script type="text/babel">
+        let root = ReactDOM.createRoot(document.getElementById('root'));
+
+        //Functional Component
+        let GreetingsFunc = (props) => {
+            return (
+                <div>
+                    <h2>Hello, {props.name}!</h2>
+                </div>
+            );
+        }
+
+        //Class Component
+        class Greetings extends React.Component {
+            //pass props by convention as param, use super method to access props within the class
+            constructor(props) {
+                super(props)
+            }
+            
+            render() {
+            //Pass a prop saved to variable or this.props.name directly to functional component
+                // const name = this.props.name;
+                return (
+                    <div class="text">
+                        <h1>Exercise 14-Frontend Greetings with Props</h1>
+                        <GreetingsFunc name={this.props.name} />                       
+                    </div>
+                )
+            }
+        }
+        root.render(<Greetings name="Jane Doe"/>) 
+    </script>
+</body>
+</html>
