@@ -1,0 +1,127 @@
+* {
+  font-family: "New Century Schoolbook",
+    "TeX Gyre Schola",
+    serif, "Playfair Display", "san serif", Helvetica;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0px;
+  height: 100vh;
+}
+
+nav {
+  background-color: #1E595D;
+}
+
+.navbar-brand h5 {
+  font-weight: bolder;
+}
+
+#navId a:hover {
+  color: #73A68C;
+}
+
+button {
+  all: unset;
+}
+
+button:focus {
+  outline: revert;
+}
+
+
+.container-fluid a {
+  color: white;
+}
+
+.navbar i {
+  color: #73A68C;
+}
+
+li a,
+li button {
+  color: white !important;
+}
+
+li a:hover,
+li button:hover {
+  color: #ff7f50b7 !important;
+}
+
+nav,
+i {
+  padding: 5px;
+}
+
+body #main-div {
+  background-image: url(./images/prudence-earl-NwBx723XaHw-unsplash.jpg);
+  background-size: cover;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  height: 88vh;
+}
+
+
+
+body img {
+  width: 100%;
+}
+
+h5 {
+  margin: 0px;
+  text-align: center;
+}
+
+footer {
+  background-color: #73A68C;
+}
+
+.contactBtn,
+.modalBtn {
+  background-color: #B6B19E;
+  border: none;
+  margin-top: 5px;
+}
+
+
+.modal-footer button:nth-of-type(2) {
+  background-color: #B6B19E;
+  border: none
+}
+
+.card {
+  position: absolute;
+  bottom: 275px;
+  left: 1075px;
+  background-color: #73a68c49;
+  width: 470px;
+  height: 330px;
+  border: none;
+  font-size: 25px;
+  color: rgba(0, 0, 0, 0.721)
+}
+
+.card a {
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.721)
+}
+
+.card button:hover {
+  background-color: #73A68C;
+}
+
+ .about {
+   width: 1000px;
+   margin: auto;
+   padding: 15px;
+   border: solid 1px lightgray
+ }
+
+ .about section {
+   text-align: center;
+ }
+
+ .inventory{
+  background-color: lightgray;
+ }
