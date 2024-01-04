@@ -9,20 +9,16 @@ import Products from './components/Products';
 
 function App() {
   return (
-    <BrowserRouter>
+    <div>
       <MyNavBar/>
-
-      <div>
-          <Routes>
-            <Route path="/" element={<Home/>}/>
-            <Route path="/about-us" element={<AboutUs/>}/>
-            <Route path="/contact-us" element={<ContactUs/>}/>
-            <Route path="/products" element={<Products/>}/>
-          </Routes>
-      </div>
-
-      <MyFooter/>
-    </BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Home/>}/>
+          <Route path="/about-us" element={<AboutUs/>}/>
+          <Route path="/contact-us" element={<ContactUs/>}/>
+          <Route path="/products" element={<Products/>}/>
+        </Routes>
+        <MyFooter/>
+    </div>
   );
 }
 
